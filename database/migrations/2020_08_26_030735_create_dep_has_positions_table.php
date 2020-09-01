@@ -8,7 +8,8 @@ class CreateDepHasPositionsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * @author Thu Rein Lynn
+     * 26.8.2020
      * @return void
      */
     public function up()
