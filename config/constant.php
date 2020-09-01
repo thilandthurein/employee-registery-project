@@ -2,7 +2,7 @@
 
 	return[
 		//paginate 
-		'per_page'=>20,
+		'per_page'=>10,
 		//default Department
 		'department_id'=>1,
 		//default Position

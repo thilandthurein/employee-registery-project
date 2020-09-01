@@ -204,7 +204,7 @@ class EmployeeController extends Controller
             array_push($search_data,$search_id);
         }
         if($employee_name){ //employee_name exist or not exist
-            $search_name=['employee_name',$employee_name];
+            $search_name=['employee_name','like',$employee_name.'%'];
             array_push($search_data,$search_name);
         }
         $per_page=Config::get('constant.per_page');
@@ -228,11 +228,11 @@ class EmployeeController extends Controller
         $id=$request->id;
         $employee_name=$request->employee_name;
         if($id){ //employee_id exist or not exist
-            $search_id=['id',$id];
+            $search_id=['employees.id',$id];
             array_push($data,$search_id);
         }
         if($employee_name){ //employee_name exist or not exist
-            $search_name=['employee_name',$employee_name];
+            $search_name=['employees.employee_name',$employee_name];
             array_push($data,$search_name);
         }
 
