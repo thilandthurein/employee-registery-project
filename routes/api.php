@@ -51,3 +51,9 @@ Route::get('/clear-cache',function(){
 	Artisan::call('cache:clear');
 	return "Cache is cleared";
 });
+
+//EmployeeRegistrationController
+Route::post('/save','EmployeeRegistrationController@save');
+
+Route::post('/saveposition','PositionRegistrationController@save');
+Route::post('/updateemployee','EmployeeRegistrationController@update');
